@@ -20,7 +20,7 @@
             font-size: 12px;
           }
           #map {
-            width: 440px;
+            width: 80%;
           }
           #listing {
             position: absolute;
@@ -75,7 +75,7 @@
           }
           #resultsTable {
             border-collapse: collapse;
-            width: 240px;
+            width: 20%px;
           }
           #rating {
             font-size: 13px;
@@ -123,6 +123,24 @@
           </select>
         </div>
 
+        <div id="controls">
+          <select id="country">
+            <option value="all">All</option>
+            <option value="au">Australia</option>
+            <option value="br">Brazil</option>
+            <option value="ca">Canada</option>
+            <option value="fr">France</option>
+            <option value="de">Germany</option>
+            <option value="mx">Mexico</option>
+            <option value="nz">New Zealand</option>
+            <option value="it">Italy</option>
+            <option value="za">South Africa</option>
+            <option value="es">Spain</option>
+            <option value="pt">Portugal</option>
+            <option value="us" selected>U.S.A.</option>
+            <option value="uk">United Kingdom</option>
+          </select>
+        </div>
         <div id="map"></div>
 
         <div id="listing">
@@ -131,7 +149,7 @@
           </table>
         </div>
 
-        <div style="display: none">
+        <div  style="display: none;inline:block">
           <div id="info-content">
             <table>
               <tr id="iw-url-row" class="iw_table_row">
@@ -167,7 +185,7 @@
     var map, places, infoWindow;
     var markers = [];
     var autocomplete;
-    var countryRestrict = {'country': 'us'};
+    var countryRestrict = {'country': 'tw'};
     var MARKER_PATH = 'https://maps.gstatic.com/intl/en_us/mapfiles/marker_green';
     var hostnameRegexp = new RegExp('^https?://.+?/');
 
@@ -250,7 +268,7 @@
           /** @type {!HTMLInputElement} */ (
               document.getElementById('autocomplete')), {
           //  types: ['(cities)'],
-            componentRestrictions: countryRestrict
+            //componentRestrictions: countryRestrict
           });
       places = new google.maps.places.PlacesService(map);
 
