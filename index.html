@@ -14,6 +14,8 @@
           }
           #map {
             height: 100%;
+             width : 60%;
+             display: inline-block;
           }
         </style>
 
@@ -21,14 +23,13 @@
           table {
             font-size: 12px;
           }
-          #map {
 
-          }
           #listing {
-            width: 20%;
-            height: 100%;
+            width: 30%;
+            height:100%;
             display:inline-block;
             overflow: auto;
+
           }
 
 
@@ -75,52 +76,43 @@
               <span class="input-group-addon" id="basic-addon1">輸入地址</span>
               <input  id="autocomplete" placeholder="Enter an address" type="text" class="form-control" placeholder="Enter an address" aria-describedby="basic-addon2">
             </div>
-
-            <div class="dropdown">
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-All
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#" data-value="all"></a></li>
-                <li><a href="#" data-value="au">Australia</a></li>
-                <li><a href="#" data-value="br">Brazil</a></li>
-                <li><a href="#" data-value="ca">Canada</a></li>
-                <li><a href="#" data-value="fr">France</a></li>
-                <li><a href="#" data-value="de">Germany</a></li>
-                <li><a href="#" data-value="mx">Mexico</a></li>
-                <li><a href="#" data-value="nz">New Zealand</a></li>
-                <li><a href="#" data-value="it">Italy</a></li>
-                <li><a href="#" data-value="za">South Africa</a></li>
-                <li><a href="#" data-value="es">Spain</a></li>
-                <li><a href="#" data-value="pt">Portugal</a></li>
-                <li><a href="#" data-value="us" >U.S.A.</a></li>
-                <li><a href="#" data-value="uk">United Kingdom</a></li>
-              </ul>
+            <div id="controls" class="form-group">
+               <label for="country">國家</label>
+              <select id="country"  class="form-control">
+                <option value="all" selected>All</option>
+                <option value="au">Australia</option>
+                <option value="br">Brazil</option>
+                <option value="ca">Canada</option>
+                <option value="fr">France</option>
+                <option value="de">Germany</option>
+                <option value="mx">Mexico</option>
+                <option value="nz">New Zealand</option>
+                <option value="it">Italy</option>
+                <option value="za">South Africa</option>
+                <option value="es">Spain</option>
+                <option value="pt">Portugal</option>
+                <option value="us" >U.S.A.</option>
+                <option value="uk">United Kingdom</option>
+              </select>
             </div>
-            
           </div>
         </div>
+        <div class="panel panel-default" style="width:100%;height:80%">
+          <div class="panel-body" style="width:100%;height:100%">
 
-
-
-
-
-
-
-
-
-                <div id="map"style=" width : 60%;height:80%" >
-
+              <div id="map" >
                 </div>
 
+                <div id="listing">
+                  <table id="resultsTable">
+                    <tbody id="results"></tbody>
+                  </table>
+                </div>
+</div>
+</div>
 
 
-      <div id="listing">
-        <table id="resultsTable">
-          <tbody id="results"></tbody>
-        </table>
-      </div>
+
 
 <div  style="display: none;inline:block">
   <div id="info-content">
@@ -154,10 +146,5 @@ All
     <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
     <script src="js/controlMap.js" charset="utf-8"></script>
-    <script type="text/javascript">
-      $(function(){
-$('.dropdown-toggle').dropdown();
-      });
-    </script>
       </body>
     </html>
