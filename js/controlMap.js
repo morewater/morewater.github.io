@@ -110,9 +110,10 @@ function onPlaceChanged() {
 
 // Search for hotels in the selected city, within the viewport of the map.
 function search() {
+  var type=$('#type').val();
   var search = {
     bounds: map.getBounds(),
-    types: ['lodging']
+    types: [type]
   };
 
   places.nearbySearch(search, function(results, status) {
