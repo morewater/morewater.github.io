@@ -16,7 +16,7 @@
         event.preventDefault();
     });
 
-    // Highlight the top nav as scrolling occurs
+    // Highlight the top nav as scrolling occ   urs
     $('body').scrollspy({
         target: '.navbar-fixed-top',
         offset: 51
