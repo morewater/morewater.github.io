@@ -2,10 +2,10 @@ const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
-    title: `Arnaud Valensi`,
-    description: `Arnaud Valensi's personal blog`,
-    author: `Arnaud Valensi`,
-    siteUrl: `https://arnaudvalensi.github.io`, // No trailing slash allowed.
+    title: `Just do it `,
+    description: `share my infomation`,
+    author: `MW`,
+    siteUrl: `https://morewater555.github.io`, // No trailing slash allowed.
     social: {
       twitter: `ArnaudValensi`,
     },

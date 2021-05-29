@@ -12,11 +12,11 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "import-notion-posts": "dotenv -- python3 ./bin/get-blog-posts.py"
+    "import-notion-posts": "dotenv -e ./.env  -- python3 ./bin/get-blog-posts.py"
   },
   "dependencies": {
     "@emotion/core": "10.0.35",
-    "gatsby": "2.24.50",
+    "gatsby": "2.25.0",
     "gatsby-image": "2.4.16",
     "gatsby-plugin-catch-links": "2.3.11",
     "gatsby-plugin-dark-mode": "^1.1.2",
